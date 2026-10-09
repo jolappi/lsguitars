@@ -1,130 +1,712 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lapland Shaman Guitars — Under construction</title>
-<meta name="description" content="One-of-a-kind electric guitars handmade in Nokia, Finland. Our new website is under construction.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23101313' stroke='%23c17645' stroke-width='3'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Georgia,serif' font-size='24' fill='%23e7e1d5'%3ELS%3C/text%3E%3C/svg%3E">
-<style>
-  :root {
-    --ink: #101313;
-    --paper: #e7e1d5;
-    --copper: #c17645;
-    --muted: #8f928f;
-    --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-    --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
-  }
-  * { box-sizing: border-box; }
-  html, body { height: 100%; }
-  body {
-    margin: 0;
-    background: var(--ink);
-    color: var(--paper);
-    font-family: var(--sans);
-    font-size: 15px;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
-  main {
-    min-height: 100%;
-    display: grid;
-    grid-template-rows: 1fr auto;
-    padding: 0 7.5vw;
-    background:
-      radial-gradient(ellipse at 85% 20%, rgba(193, 118, 69, .16), transparent 55%),
-      radial-gradient(ellipse at 10% 90%, rgba(159, 184, 196, .07), transparent 50%);
-  }
-  .content {
-    align-self: center;
-    max-width: 920px;
-    padding: 80px 0 40px;
-  }
-  .mark {
-    width: 52px;
-    height: 52px;
-    display: grid;
-    place-items: center;
-    border: 1px solid currentColor;
-    border-radius: 50%;
-    font-family: var(--serif);
-    font-size: 17px;
-    margin-bottom: 56px;
-  }
-  .eyebrow {
-    margin: 0 0 22px;
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: .24em;
-    text-transform: uppercase;
-  }
-  .eyebrow::before {
-    content: "";
-    display: inline-block;
-    width: 30px;
-    height: 1px;
-    margin-right: 13px;
-    vertical-align: middle;
-    background: var(--copper);
-  }
-  h1 {
-    margin: 0;
-    font-family: var(--serif);
-    font-weight: 400;
-    font-size: clamp(54px, 9vw, 120px);
-    line-height: .9;
-    letter-spacing: -.04em;
-  }
-  h1 i { color: var(--copper); }
-  .status {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    margin: 44px 0 18px;
-    padding: 10px 16px;
-    border: 1px solid var(--copper);
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: .16em;
-    text-transform: uppercase;
-  }
-  .status::before {
-    content: "";
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: var(--copper);
-    animation: pulse 2.4s ease-in-out infinite;
-  }
-  @keyframes pulse { 50% { opacity: .25; } }
-  .copy {
-    max-width: 460px;
-    margin: 0;
-    color: rgba(255, 255, 255, .62);
-  }
-  footer {
-    padding: 22px 0 28px;
-    border-top: 1px solid rgba(255, 255, 255, .13);
-    color: #626460;
-    font-size: 9px;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .status::before { animation: none; }
-  }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lapland Shaman Guitars — Handmade in Nokia, Finland</title>
+  <meta name="description" content="One-of-a-kind electric guitars handmade in Nokia, Finland. Explore builds in progress, finished instruments and unique prototypes.">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="theme-color" content="#101313">
+  <link rel="canonical" href="https://jounilappi.hopto.org/lsguitars/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Lapland Shaman Guitars">
+  <meta property="og:title" content="Lapland Shaman Guitars — Handmade in Nokia, Finland">
+  <meta property="og:description" content="One-of-a-kind electric guitars handmade in Nokia, Finland. Explore builds in progress, finished instruments and unique prototypes.">
+  <meta property="og:url" content="https://jounilappi.hopto.org/lsguitars/">
+  <meta property="og:image" content="https://jounilappi.hopto.org/lsguitars/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Lapland Shaman Guitars — Built slowly. Played forever. A red handmade angular electric guitar on a dark background">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/site.js" defer></script>
 </head>
-<body>
-<main>
-  <div class="content">
-    <div class="mark" aria-hidden="true">LS</div>
-    <p class="eyebrow">Handmade in Nokia, Finland</p>
-    <h1>Lapland Shaman<br><i>Guitars</i></h1>
-    <p class="status">Under construction</p>
-    <p class="copy">One-of-a-kind electric guitars, built slowly and by hand. Our new website is on the workbench and will be ready soon.</p>
-  </div>
-  <footer>© 2026 Lapland Shaman Guitars</footer>
-</main>
+<body class="antialiased">
+  <main>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Lapland Shaman Guitars home"><span class="brand-mark" aria-hidden="true">LS</span><span>Lapland Shaman <em>Guitars</em></span></a>
+      <nav aria-label="Main navigation">
+        <a href="#guitars">Guitars</a>
+        <a href="#story">Origin</a>
+        <a href="#editor">Editor</a>
+        <a href="#in-action">In action</a>
+        <a class="nav-contact" href="#contact">Contact</a>
+      </nav>
+    </header>
+    <section class="hero" id="top">
+      <div class="hero-image" aria-hidden="true"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Handmade in Nokia, Finland</p>
+        <h1>Built slowly.<br><i>Played forever.</i></h1>
+        <p class="hero-copy">Singular electric guitars shaped by hand, tuned by ear, and built one at a time in a small workshop in Nokia.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#guitars">Explore the guitars <span>↘</span></a>
+          <a class="text-link" href="#story">Our origin <span>—</span></a>
+        </div>
+      </div>
+      <div class="hero-note">
+        <span>The workshop</span>
+        <strong>Nokia, Finland</strong>
+      </div>
+    </section>
+    <section class="manifesto">
+      <p class="section-number">01 / Philosophy</p>
+      <blockquote>“Every piece of wood carries a voice.<br><em>Our work is to reveal it.</em>”</blockquote>
+      <p class="manifesto-copy">No production line. No two instruments alike. Just patient hands, resonant timber, and the belief that a guitar should feel alive before it is ever plugged in.</p>
+    </section>
+    <section class="guitars-section" id="guitars">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">02 / From the workshop</p>
+          <h2>Guitar galleries</h2>
+        </div>
+        <p>Follow each instrument from the first cut to its life beyond the workshop.</p>
+      </div>
+      <div class="gallery-jump" aria-label="Choose a guitar gallery">
+        <a href="#buried-and-gone" aria-controls="buried-and-gone"><span>01</span><strong>Buried and gone</strong><small>Gone, not forgotten</small></a>
+        <a href="#finished" aria-controls="finished"><span>02</span><strong>Hanged to dry</strong><small>Finished instruments</small></a>
+        <a href="#working-on" aria-controls="working-on"><span>03</span><strong>Chopping the pieces</strong><small>Builds in progress</small></a>
+        <a href="#mysterious-experiments" aria-controls="mysterious-experiments"><span>04</span><strong>We all float down here</strong><small>Mysterious experiments</small></a>
+      </div>
+      <article class="gallery-block" id="buried-and-gone">
+        <div class="gallery-intro">
+          <span class="gallery-count">01</span>
+          <div>
+            <p>Out of the workshop</p>
+            <h3>Buried and gone</h3>
+          </div>
+          <p class="gallery-description">Gone, but not forgotten.</p>
+        </div>
+        <details class="gallery-disclosure">
+          <summary><span class="open-label">Open gallery</span><span class="close-label">Close gallery</span><small>15 photos</small></summary>
+          <div class="gallery-grid finished-gallery">
+            <figure>
+              <a class="lightbox-link" href="gallery/finished-all/finished-085.webp"><img src="gallery/finished-all/finished-085.webp" alt="Kitten-painted bass leaning on a leather armchair" loading="lazy"></a>
+              <figcaption><span>Kitten Cloud <em class="credit">in collaboration with Alex Blom</em></span><small>01 / 15</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/finished-all/finished-058.webp"><img src="gallery/finished-all/finished-058.webp" alt="Pink and purple kitten-painted guitar with chrome hardware, seen from above" loading="lazy"></a>
+              <figcaption><span>Kitten Cloud</span><small>02 / 15</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/finished-all/finished-060.webp"><img src="gallery/finished-all/finished-060.webp" alt="Close-up of the pink kitten-painted body with a chrome bridge and knobs" loading="lazy"></a>
+              <figcaption><span>Kitten Cloud, detail</span><small>03 / 15</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/finished-all/finished-082.webp"><img src="gallery/finished-all/finished-082.webp" alt="Burst four-string bass with figured grain and a wooden control cover" loading="lazy"></a>
+              <figcaption><span>Smoke Signal</span><small>04 / 15</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/finished-all/finished-015.webp"><img src="gallery/finished-all/finished-015.webp" alt="Red headless guitar with deep pointed horns, black fretboard and black hardware" loading="lazy"></a>
+              <figcaption><span>Headhunter</span><small>05 / 15</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/finished-all/finished-029.webp"><img src="gallery/finished-all/finished-029.webp" alt="Low-angle view of a red headless guitar with a knurled fine-tuner bridge on a rug" loading="lazy"></a>
+              <figcaption><span>Headhunter, bridge</span><small>06 / 15</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/finished-all/finished-020.webp"><img src="gallery/finished-all/finished-020.webp" alt="Sunburst single-cutaway guitar with tortoiseshell pickguard and black headstock, by a frosted-glass door" loading="lazy"></a>
+              <figcaption><span>Sunset Skull</span><small>07 / 15</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/finished-all/finished-021.webp"><img src="gallery/finished-all/finished-021.webp" alt="Sunburst guitar with a winged skull tailpiece and a dark cross-shaped stripe on the body" loading="lazy"></a>
+              <figcaption><span>Sunset Skull, tailpiece</span><small>08 / 15</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/finished-all/finished-049.webp"><img src="gallery/finished-all/finished-049.webp" alt="Charcoal V-shaped guitar with black hardware, leaning on a worn leather armchair near a brick fireplace" loading="lazy"></a>
+              <figcaption><span>Coal Crow</span><small>09 / 15</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/finished-all/finished-050.webp"><img src="gallery/finished-all/finished-050.webp" alt="Charcoal V-shaped guitar lying on a wooden floor among tangled cables, seen from above" loading="lazy"></a>
+              <figcaption><span>Coal Crow, from above</span><small>10 / 15</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/finished-all/finished-045.webp"><img src="gallery/finished-all/finished-045.webp" alt="Dark sunburst single-cutaway guitar with cream pickups, leaning on a brick wall with iron stove doors" loading="lazy"></a>
+              <figcaption><span>Dark Brew</span><small>11 / 15</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/finished-all/finished-086.webp"><img src="gallery/finished-all/finished-086.webp" alt="Dark sunburst single-cutaway guitar with cream pickups and gold knobs, front view" loading="lazy"></a>
+              <figcaption><span>Dark Brew</span><small>12 / 15</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/finished-all/finished-027.webp"><img src="gallery/finished-all/finished-027.webp" alt="Red double-horned body with a black strap, another red guitar hanging behind" loading="lazy"></a>
+              <figcaption><span>Horned Red</span><small>13 / 15</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/finished-all/finished-016.webp"><img src="gallery/finished-all/finished-016.webp" alt="Red single-cutaway guitar lying on a carpet, seen from the headstock end" loading="lazy"></a>
+              <figcaption><span>Ladybird</span><small>14 / 15</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/finished-all/finished-014.webp"><img src="gallery/finished-all/finished-014.webp" alt="Purple-burst instrument with a striped neck leaning in a doorway" loading="lazy"></a>
+              <figcaption><span>Violet Ghost</span><small>15 / 15</small></figcaption>
+            </figure>
+          </div>
+        </details>
+      </article>
+      <article class="gallery-block finished-block" id="finished">
+        <div class="gallery-intro">
+          <span class="gallery-count">02</span>
+          <div>
+            <p>Finished instruments</p>
+            <h3>Hanged to dry</h3>
+          </div>
+          <p class="gallery-description">Finished and set up—each one a singular build.</p>
+        </div>
+        <details class="gallery-disclosure">
+          <summary><span class="open-label">Open gallery</span><span class="close-label">Close gallery</span><small>20 photos</small></summary>
+          <div class="gallery-grid finished-gallery">
+            <figure>
+              <a class="lightbox-link" href="gallery/finished-all/finished-081.webp"><img src="gallery/finished-all/finished-081.webp" alt="Dark spiky V-shaped guitar with a magazine-shaped fin, photographed outdoors" loading="lazy"></a>
+              <figcaption><span>Reindeer Rifle</span><small>01 / 20</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/finished-all/finished-072.webp"><img src="gallery/finished-all/finished-072.webp" alt="Dark V-shaped guitar with a magazine-shaped fin hanging from a rope, front view" loading="lazy"></a>
+              <figcaption><span>Reindeer Rifle</span><small>02 / 20</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/finished-all/finished-070.webp"><img src="gallery/finished-all/finished-070.webp" alt="Back of the dark V-shaped guitar with its curved magazine-shaped fin, hanging from a rope" loading="lazy"></a>
+              <figcaption><span>Reindeer Rifle, back</span><small>03 / 20</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/finished-all/finished-043.webp"><img src="gallery/finished-all/finished-043.webp" alt="Bright red angular guitar cut out on white, with figured grain, gold hardware and ornate inlays" loading="lazy"></a>
+              <figcaption><span>Blood Moon</span><small>04 / 20</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/finished-all/finished-078.webp"><img src="gallery/finished-all/finished-078.webp" alt="Red angular guitar with gold hardware hanging from a rope, front view" loading="lazy"></a>
+              <figcaption><span>Blood Moon, hanging</span><small>05 / 20</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/finished-all/finished-071.webp"><img src="gallery/finished-all/finished-071.webp" alt="Close-up of a pointed red headstock with gold tuners next to a hanging rope" loading="lazy"></a>
+              <figcaption><span>Blood Moon, headstock</span><small>06 / 20</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/finished-all/finished-083.webp"><img src="gallery/finished-all/finished-083.webp" alt="Silver and gold guitar with carved flame patterns, pointed horns and a black tremolo" loading="lazy"></a>
+              <figcaption><span>Frost Fire</span><small>07 / 20</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/finished-all/finished-067.webp"><img src="gallery/finished-all/finished-067.webp" alt="Red guitar with barbed-wire inlays hanging from a rope against a dark, blurred workshop" loading="lazy"></a>
+              <figcaption><span>Gallows Bird</span><small>08 / 20</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/finished-all/finished-065.webp"><img src="gallery/finished-all/finished-065.webp" alt="Back of the red guitar hanging from a rope, with a natural wood neck and black strap" loading="lazy"></a>
+              <figcaption><span>Gallows Bird, back</span><small>09 / 20</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/finished-all/finished-066.webp"><img src="gallery/finished-all/finished-066.webp" alt="Red headstock bound with thick rope above a dark fretboard with barbed-wire inlays" loading="lazy"></a>
+              <figcaption><span>Gallows Bird, headstock</span><small>10 / 20</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/finished-all/finished-074.webp"><img src="gallery/finished-all/finished-074.webp" alt="Red double-cutaway guitar with a black pickguard, gold bridge and barbed-wire inlays" loading="lazy"></a>
+              <figcaption><span>Sour Cherry</span><small>11 / 20</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/finished-all/finished-076.webp"><img src="gallery/finished-all/finished-076.webp" alt="Back of the red double-cutaway guitar with a black strap, hanging by its headstock" loading="lazy"></a>
+              <figcaption><span>Sour Cherry, back</span><small>12 / 20</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/finished-all/finished-047.webp"><img src="gallery/finished-all/finished-047.webp" alt="Angular guitar in red-to-natural burst with barbed-wire artwork, leaning among amplifiers in a workshop" loading="lazy"></a>
+              <figcaption><span>No Man's Land</span><small>13 / 20</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/finished-all/finished-033.webp"><img src="gallery/finished-all/finished-033.webp" alt="Pale natural angular guitar with ornate inlays and dark red pickup surrounds in a dim room" loading="lazy"></a>
+              <figcaption><span>Ghost Birch</span><small>14 / 20</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/finished-all/finished-010.webp"><img src="gallery/finished-all/finished-010.webp" alt="Red guitar with sharp horns and an axe-blade headstock ornament, standing against a panelled door" loading="lazy"></a>
+              <figcaption><span>The Woodcutter</span><small>15 / 20</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/finished-all/finished-009.webp"><img src="gallery/finished-all/finished-009.webp" alt="Red double-horned guitar with black pickguard and tremolo arm, leaning against a wooden wall" loading="lazy"></a>
+              <figcaption><span>Crimson Fang</span><small>16 / 20</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/finished-all/finished-037.webp"><img src="gallery/finished-all/finished-037.webp" alt="Sunburst guitar with curled horn and red headstock, on a stand in a cluttered workshop" loading="lazy"></a>
+              <figcaption><span>Fiddlehead</span><small>17 / 20</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/finished-all/finished-040.webp"><img src="gallery/finished-all/finished-040.webp" alt="Red-orange single-cutaway guitar seen front-on: light fretboard with red dot inlays, black pickups" loading="lazy"></a>
+              <figcaption><span>Ember</span><small>18 / 20</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/finished-all/finished-002.webp"><img src="gallery/finished-all/finished-002.webp" alt="Distressed brown single-cutaway bass with gold knobs and a metallic pickguard, hanging on a wall" loading="lazy"></a>
+              <figcaption><span>Old Bark</span><small>19 / 20</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/finished-all/finished-063.webp"><img src="gallery/finished-all/finished-063.webp" alt="Headstock close-up with a red pearloid truss rod cover and untrimmed strings" loading="lazy"></a>
+              <figcaption><span>Pearl &amp; strings</span><small>20 / 20</small></figcaption>
+            </figure>
+          </div>
+        </details>
+      </article>
+      <article class="gallery-block finished-block" id="working-on">
+        <div class="gallery-intro">
+          <span class="gallery-count">03</span>
+          <div>
+            <p>In the workshop</p>
+            <h3>Chopping the pieces</h3>
+          </div>
+          <p class="gallery-description">Raw timber becoming something with a pulse.</p>
+        </div>
+        <details class="gallery-disclosure">
+          <summary><span class="open-label">Open gallery</span><span class="close-label">Close gallery</span><small>54 photos</small></summary>
+          <div class="gallery-grid workshop-gallery">
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-001.webp"><img src="gallery/working-all/working-001.webp" alt="Smoky dark-stained V-shaped body with masked pickup cavities, lying on a black amp cabinet" loading="lazy"></a>
+              <figcaption><span>Smoke-stained V</span><small>01 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-003.webp"><img src="gallery/working-all/working-003.webp" alt="Dark slotted fretboard with clusters of tiny white dot inlays on a pale neck" loading="lazy"></a>
+              <figcaption><span>Dot inlays</span><small>02 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-004.webp"><img src="gallery/working-all/working-004.webp" alt="Pale headstock blank with pencilled tuner-hole circles beside a reddish fretboard" loading="lazy"></a>
+              <figcaption><span>Headstock sketch</span><small>03 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-005.webp"><img src="gallery/working-all/working-005.webp" alt="Black V-shaped and red double-cutaway guitars with barbed-wire inlays, awaiting hardware" loading="lazy"></a>
+              <figcaption><span>Waiting for hardware</span><small>04 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-006.webp"><img src="gallery/working-all/working-006.webp" alt="Raw pale angular guitar beside a red angular one with a pointed headstock" loading="lazy"></a>
+              <figcaption><span>Raw meets red</span><small>05 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-007.webp"><img src="gallery/working-all/working-007.webp" alt="Single-cutaway body with a dark red sunburst fading into a natural wood centre" loading="lazy"></a>
+              <figcaption><span>Sunburst body</span><small>06 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-008.webp"><img src="gallery/working-all/working-008.webp" alt="Close-up of a single white barbed-wire inlay on a dark fretboard" loading="lazy"></a>
+              <figcaption><span>Barbed wire inlay</span><small>07 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-010.webp"><img src="gallery/working-all/working-010.webp" alt="Wood boards and blocks clamped on a folding workbench, body templates on the wall behind" loading="lazy"></a>
+              <figcaption><span>Raw neck blanks</span><small>08 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-011.webp"><img src="gallery/working-all/working-011.webp" alt="Close-up of a pale body horn with a through-cut oval hole and stepped edge" loading="lazy"></a>
+              <figcaption><span>Horn cut-out</span><small>09 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-013.webp"><img src="gallery/working-all/working-013.webp" alt="Front of a raw horned body showing the neck pocket and two pickup routes" loading="lazy"></a>
+              <figcaption><span>Horned body, raw</span><small>10 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-014.webp"><img src="gallery/working-all/working-014.webp" alt="Low side view of the horned body, revealing its thickness and rounded edges" loading="lazy"></a>
+              <figcaption><span>Horned body, side</span><small>11 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-015.webp"><img src="gallery/working-all/working-015.webp" alt="Closer view of the red horned body: framed humbuckers and two knobs in a leaf-covered panel" loading="lazy"></a>
+              <figcaption><span>Horned body, red</span><small>12 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-016.webp"><img src="gallery/working-all/working-016.webp" alt="Natural horned body from the back: metal-leaf plate, figured wood cover, two black hatches" loading="lazy"></a>
+              <figcaption><span>Metal leaf back</span><small>13 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-017.webp"><img src="gallery/working-all/working-017.webp" alt="Pale neck blank with cut fret slots and a squared headstock, lying on a rag rug" loading="lazy"></a>
+              <figcaption><span>Neck blank</span><small>14 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-018.webp"><img src="gallery/working-all/working-018.webp" alt="Glossy amber-finished body with a raised rim, clamped to a workbench in a garage" loading="lazy"></a>
+              <figcaption><span>Driftwood, amber</span><small>15 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-019.webp"><img src="gallery/working-all/working-019.webp" alt="Body with a purple-brown edge burst and bare natural centre, clamped to a workbench" loading="lazy"></a>
+              <figcaption><span>Driftwood, burst</span><small>16 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-021.webp"><img src="gallery/working-all/working-021.webp" alt="Fretted neck with purple-stained sides resting across an aluminium ladder" loading="lazy"></a>
+              <figcaption><span>Violet Ghost, neck</span><small>17 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-022.webp"><img src="gallery/working-all/working-022.webp" alt="Red-stained angular body with pointed horns and a pale neck fitted, beside an orange air hose" loading="lazy"></a>
+              <figcaption><span>Red angles</span><small>18 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-024.webp"><img src="gallery/working-all/working-024.webp" alt="Red headless guitar with a spiky body and copper-toned pickups, propped on a suitcase" loading="lazy"></a>
+              <figcaption><span>Headhunter, almost done</span><small>19 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-026.webp"><img src="gallery/working-all/working-026.webp" alt="Back of a raw single-cutaway body with a routed control cavity and round recess" loading="lazy"></a>
+              <figcaption><span>Single-cut, back</span><small>20 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-027.webp"><img src="gallery/working-all/working-027.webp" alt="Raw single-cutaway body with its neck test-fitted, fretboard marked with dots" loading="lazy"></a>
+              <figcaption><span>Neck test-fit</span><small>21 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-028.webp"><img src="gallery/working-all/working-028.webp" alt="Back of a deep red-stained single-cutaway body, control cavity left bare, on a workbench" loading="lazy"></a>
+              <figcaption><span>Red stain</span><small>22 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-030.webp"><img src="gallery/working-all/working-030.webp" alt="Glossy red single-cutaway body with an unfinished neck fitted, on a yellow mat among tools" loading="lazy"></a>
+              <figcaption><span>Gloss coat</span><small>23 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-031.webp"><img src="gallery/working-all/working-031.webp" alt="Dark fretboard with a row of white barbed-wire inlays, viewed lengthwise" loading="lazy"></a>
+              <figcaption><span>Barbed wire fretboard</span><small>24 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-033.webp"><img src="gallery/working-all/working-033.webp" alt="Two raw double-cutaway bodies, one with a barbed-wire-inlaid neck running through it" loading="lazy"></a>
+              <figcaption><span>Twin bodies</span><small>25 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-034.webp"><img src="gallery/working-all/working-034.webp" alt="Pencil outline of an offset double-cutaway body drawn across three pale boards" loading="lazy"></a>
+              <figcaption><span>Pencil lines</span><small>26 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-035.webp"><img src="gallery/working-all/working-035.webp" alt="Brown-stained double-cutaway guitar with barbed-wire inlays and a notched headstock, by a speaker cabinet" loading="lazy"></a>
+              <figcaption><span>Brown &amp; barbed</span><small>27 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-036.webp"><img src="gallery/working-all/working-036.webp" alt="Reddish fretboard with dark barbed-wire markings beside a plain dark blank and traced body blanks" loading="lazy"></a>
+              <figcaption><span>Fretboard blanks</span><small>28 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-037.webp"><img src="gallery/working-all/working-037.webp" alt="Pale angular body with engraved barbed-wire lines and routed pickup cavities, clamped on a stand" loading="lazy"></a>
+              <figcaption><span>No Man's Land, raw</span><small>29 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-038.webp"><img src="gallery/working-all/working-038.webp" alt="Clear-coated body near the neck pocket, barbed-wire engraving meeting a red dripping edge fade" loading="lazy"></a>
+              <figcaption><span>No Man's Land, blood drip</span><small>30 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-040.webp"><img src="gallery/working-all/working-040.webp" alt="Cut-out body blank with a long swept horn and pencil-drawn cavity outlines, lying on a floor" loading="lazy"></a>
+              <figcaption><span>Swept horn blank</span><small>31 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-041.webp"><img src="gallery/working-all/working-041.webp" alt="Offset body blank of glued-up boards with two pickup outlines marked in pencil" loading="lazy"></a>
+              <figcaption><span>Offset blank</span><small>32 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-042.webp"><img src="gallery/working-all/working-042.webp" alt="Stack of rough sawn boards resting across a bandsaw table in the workshop" loading="lazy"></a>
+              <figcaption><span>Rough boards</span><small>33 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-045.webp"><img src="gallery/working-all/working-045.webp" alt="Three slotted fretboards, two with barbed-wire markers, lined up on a workbench among tools" loading="lazy"></a>
+              <figcaption><span>Barbed wire necks</span><small>34 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-046.webp"><img src="gallery/working-all/working-046.webp" alt="Selfie in a black hat in front of an ornate stone church doorway" loading="lazy"></a>
+              <figcaption><span>The shaman himself</span><small>35 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-048.webp"><img src="gallery/working-all/working-048.webp" alt="Freshly cut logs on a trailer behind a quad bike on a snowy forest track" loading="lazy"></a>
+              <figcaption><span>Fresh timber</span><small>36 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-049.webp"><img src="gallery/working-all/working-049.webp" alt="Wooden strip clamped against a miter fence on a sawdust-covered bandsaw table" loading="lazy"></a>
+              <figcaption><span>Bandsaw work</span><small>37 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-050.webp"><img src="gallery/working-all/working-050.webp" alt="Fretboard with dark sitting-cat inlays laid across a grey cut-out body" loading="lazy"></a>
+              <figcaption><span>Cat inlays</span><small>38 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-051.webp"><img src="gallery/working-all/working-051.webp" alt="Angular body in glossy, crackle-textured black finish with routed pickup cavities, held in a clamp" loading="lazy"></a>
+              <figcaption><span>Crackle black</span><small>39 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-053.webp"><img src="gallery/working-all/working-053.webp" alt="Two black pointed bodies with routed cavities and small pale antler-like inlays, leaning together" loading="lazy"></a>
+              <figcaption><span>Antler inlays</span><small>40 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-054.webp"><img src="gallery/working-all/working-054.webp" alt="Rough single-cutaway body with ridged machining marks on the carved top and routed cavities" loading="lazy"></a>
+              <figcaption><span>Machined top</span><small>41 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-055.webp"><img src="gallery/working-all/working-055.webp" alt="Dark streaky fretboard blank on a machine bed, with small cross-shaped inlay pockets cut in" loading="lazy"></a>
+              <figcaption><span>Cross inlays, cut</span><small>42 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-057.webp"><img src="gallery/working-all/working-057.webp" alt="Slotted dark fretboard with black cross-shaped inlays lying on a beige carpet" loading="lazy"></a>
+              <figcaption><span>Cross inlays, set</span><small>43 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-058.webp"><img src="gallery/working-all/working-058.webp" alt="Neck with a pale headstock and blue resin-filled fretboard, white material at the marker positions" loading="lazy"></a>
+              <figcaption><span>Blue resin</span><small>44 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-059.webp"><img src="gallery/working-all/working-059.webp" alt="Offset body in a dark burst finish over deep open grain, hanging on a clamp rod" loading="lazy"></a>
+              <figcaption><span>Smoke Signal, finish</span><small>45 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-060.webp"><img src="gallery/working-all/working-060.webp" alt="Flowing, swirled flame-like ornament relief-carved into a pale wooden board" loading="lazy"></a>
+              <figcaption><span>Frost Fire, carving</span><small>46 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-061.webp"><img src="gallery/working-all/working-061.webp" alt="Hand holding a horned body top covered in flowing flame-like carved grooves" loading="lazy"></a>
+              <figcaption><span>Frost Fire, carved</span><small>47 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-062.webp"><img src="gallery/working-all/working-062.webp" alt="Dark sunburst offset body with a neck set in its pocket, lying on a workbench" loading="lazy"></a>
+              <figcaption><span>Smoke Signal, neck on</span><small>48 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-063.webp"><img src="gallery/working-all/working-063.webp" alt="Carved double-horned body with routed cavities and a dark-fretboard neck set in place" loading="lazy"></a>
+              <figcaption><span>Frost Fire, neck on</span><small>49 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-064.webp"><img src="gallery/working-all/working-064.webp" alt="Angular body with deep red stain hanging in the workshop, cavities plugged with wooden blocks" loading="lazy"></a>
+              <figcaption><span>Bat Wing, hanging</span><small>50 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-065.webp"><img src="gallery/working-all/working-065.webp" alt="Back of the red-stained angular body with a round recess and a rounded control cavity" loading="lazy"></a>
+              <figcaption><span>Bat Wing, back</span><small>51 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-066.webp"><img src="gallery/working-all/working-066.webp" alt="Offset body hand-painted in pink and purple with kittens, a winged cat and sparkles" loading="lazy"></a>
+              <figcaption><span>Kitten Cloud, painted <em class="credit">in collaboration with Alex Blom</em></span><small>52 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-071.webp"><img src="gallery/working-all/working-071.webp" alt="Kitten-painted body with two pickups fitted, waiting for its neck" loading="lazy"></a>
+              <figcaption><span>Kitten Cloud, pickups</span><small>53 / 54</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-073.webp"><img src="gallery/working-all/working-073.webp" alt="Close-up of the kitten-painted body with a pickup and chrome knobs fitted" loading="lazy"></a>
+              <figcaption><span>Kitten Cloud, detail</span><small>54 / 54</small></figcaption>
+            </figure>
+          </div>
+        </details>
+      </article>
+      <article class="gallery-block finished-block" id="mysterious-experiments">
+        <div class="gallery-intro">
+          <span class="gallery-count">04</span>
+          <div>
+            <p>Mysterious experiments</p>
+            <h3>We all float down here</h3>
+          </div>
+          <p class="gallery-description">Unusual ideas, strange details, and instruments from the edge of the workshop.</p>
+        </div>
+        <details class="gallery-disclosure">
+          <summary><span class="open-label">Open gallery</span><span class="close-label">Close gallery</span><small>7 photos · 1 video</small></summary>
+          <div class="gallery-grid finished-gallery">
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-020.webp"><img src="gallery/working-all/working-020.webp" alt="Purple-stained headstock drying on a ladder" loading="lazy"></a>
+              <figcaption><span>Violet Ghost, drying</span><small>01 / 08</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-023.webp"><img src="gallery/working-all/working-023.webp" alt="Natural wood body with an asymmetric, swept shape" loading="lazy"></a>
+              <figcaption><span>Driftwood</span><small>02 / 08</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-043.webp"><img src="gallery/working-all/working-043.webp" alt="Large speaker driver mounted in a plywood box with flexible hoses" loading="lazy"></a>
+              <figcaption><span>The thing in the box</span><small>03 / 08</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/working-all/working-046.webp"><img src="gallery/working-all/working-046.webp" alt="Selfie in a black hat in front of an ornate stone church doorway" loading="lazy"></a>
+              <figcaption><span>The shaman himself</span><small>04 / 08</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/finished-all/finished-008.webp"><img src="gallery/finished-all/finished-008.webp" alt="Carved wooden hand headstock making the horns sign" loading="lazy"></a>
+              <figcaption><span>Devil's hand</span><small>05 / 08</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/finished-all/finished-012.webp"><img src="gallery/finished-all/finished-012.webp" alt="Purple-burst body with a striped purple-and-maple neck" loading="lazy"></a>
+              <figcaption><span>Violet Ghost</span><small>06 / 08</small></figcaption>
+            </figure>
+            <figure>
+              <a class="lightbox-link" href="gallery/finished-all/finished-013.webp"><img src="gallery/finished-all/finished-013.webp" alt="Back of a natural wood body with a copper cavity cover" loading="lazy"></a>
+              <figcaption><span>Copper back</span><small>07 / 08</small></figcaption>
+            </figure>
+            <figure class="video-figure">
+              <video controls preload="none" playsinline poster="video/handbuilt-cab.jpg" aria-label="Video: a handbuilt speaker cabinet being played through">
+                <source src="video/handbuilt-cab.mp4" type="video/mp4">
+              </video>
+              <figcaption><span>Handbuilt cab</span><small>08 / 08</small></figcaption>
+            </figure>
+          </div>
+        </details>
+      </article>
+      <article class="gallery-block ready-block" id="flame-strap-guide">
+        <div class="gallery-intro">
+          <span class="gallery-count">05</span>
+          <div>
+            <p>Design detail</p>
+            <h3>The flame strap guide</h3>
+          </div>
+          <p class="gallery-description">A small part that changes how the guitar hangs on you.</p>
+        </div>
+        <div class="ready-card">
+          <div class="ready-image">
+            <img src="gallery/finished-all/finished-032.webp" alt="Black flame-shaped strap guide on the back of a red guitar, with the leather strap running through it" loading="lazy">
+            <p><strong>Flame strap guide</strong><span>Unique solution</span></p>
+          </div>
+          <div class="ready-details">
+            <p class="eyebrow">Body dive vs. neck dive</p>
+            <h4>Leans in, not away.</h4>
+            <p>The flame on the back of the guitar is not just decoration — the strap runs through it. That changes the angle the strap pulls from, so the guitar turns toward the player instead of tilting away. The same idea works on round bodies too: with two strap buttons on the body, or with the strap running straight through the body itself.</p>
+            <dl>
+              <div>
+                <dt>Problem</dt>
+                <dd>Guitar tilts away from the player</dd>
+              </div>
+              <div>
+                <dt>Solution</dt>
+                <dd>Strap runs through the flame</dd>
+              </div>
+              <div>
+                <dt>Also in</dt>
+                <dd>Round bodies, with two strap buttons</dd>
+              </div>
+              <div>
+                <dt>Another way</dt>
+                <dd>Strap through the body</dd>
+              </div>
+            </dl>
+            <p class="strap-variants-title">Other versions</p>
+            <div class="gallery-grid strap-variants">
+              <figure>
+                <a class="lightbox-link" href="gallery/details/strap-two-buttons.webp"><img src="gallery/details/strap-two-buttons.webp" alt="Red angular guitar with a leather strap fixed to two strap buttons on the body" loading="lazy"></a>
+                <figcaption><span>Two strap buttons</span><small>01 / 03</small></figcaption>
+              </figure>
+              <figure>
+                <a class="lightbox-link" href="gallery/details/strap-through-body-1.webp"><img src="gallery/details/strap-through-body-1.webp" alt="Black strap running through a slot in a red guitar body" loading="lazy"></a>
+                <figcaption><span>Through the body</span><small>02 / 03</small></figcaption>
+              </figure>
+              <figure>
+                <a class="lightbox-link" href="gallery/details/strap-through-body-2.webp"><img src="gallery/details/strap-through-body-2.webp" alt="Close-up of a strap passing through the body under the bridge of a red guitar" loading="lazy"></a>
+                <figcaption><span>Through the body</span><small>03 / 03</small></figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="gallery-block ready-block" id="reindeer-rifle">
+        <div class="gallery-intro">
+          <span class="gallery-count">06</span>
+          <div>
+            <p>Built light</p>
+            <h3>Reindeer Rifle</h3>
+          </div>
+          <p class="gallery-description">Light on the shoulder, long on the neck.</p>
+        </div>
+        <div class="ready-card">
+          <div class="ready-image">
+            <img src="gallery/finished-all/finished-054.webp" alt="Reindeer Rifle: dark spiky V-shaped guitar with a magazine-shaped fin, leaning on a red wooden wall outdoors" loading="lazy">
+            <p><strong>Reindeer Rifle</strong><span>27" scale · 28 frets</span></p>
+          </div>
+          <div class="ready-details">
+            <p class="eyebrow">Easy to carry, easy to play</p>
+            <h4>Only 3 kg.</h4>
+            <p>The guitars are built to be light, so they stay comfortable through a long night of playing. The Reindeer Rifle weighs just 3 kg without its magazine — and still has a 27-inch scale and 28 frets.</p>
+            <dl>
+              <div>
+                <dt>Weight</dt>
+                <dd>3 kg without the magazine</dd>
+              </div>
+              <div>
+                <dt>Scale</dt>
+                <dd>27"</dd>
+              </div>
+              <div>
+                <dt>Frets</dt>
+                <dd>28</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </article>
+    </section>
+    <section class="story" id="story">
+      <div class="story-title">
+        <p class="section-number">03 / Origin</p>
+        <h2>Born from<br>hands &amp; <i>wood.</i></h2>
+      </div>
+      <div class="story-copy">
+        <p class="dropcap">Lapland Shaman Guitars began in Nokia, Finland, with a simple idea: build distinctive instruments slowly, carefully, and by hand.</p>
+        <p>In a small workshop in Nokia, traditional hand skills and modern playability meet in every build. The name may look north, but the sawdust, tools, and guitars belong here.</p>
+        <p>Each guitar is made one at a time—from selecting the wood to the final setup. The result is not a copy of something familiar, but a personal instrument with its own weight, grain, and voice.</p>
+        <span class="signature">Lapland Shaman</span>
+      </div>
+    </section>
+    <section class="editor" id="editor">
+      <div class="editor-title">
+        <p class="section-number">04 / Workshop tool</p>
+        <h2>Design it<br><i>in the browser.</i></h2>
+      </div>
+      <div class="editor-copy">
+        <p class="editor-lead">CNCguitarwizard is an open-source guitar design tool: set the parameters for the neck, fretboard and body, preview the toolpaths, and download CNC-ready <span class="nowrap">G-code</span> and a FreeCAD script.</p>
+        <p>Designed and coded by Jone at the Lapland Shaman workshop. Nothing to install — it runs right in your browser.</p>
+        <dl>
+          <div>
+            <dt>Designs</dt>
+            <dd>Necks, fretboards, bodies</dd>
+          </div>
+          <div>
+            <dt>Exports</dt>
+            <dd>G-code &amp; FreeCAD</dd>
+          </div>
+          <div>
+            <dt>Source</dt>
+            <dd>Open source</dd>
+          </div>
+        </dl>
+        <a class="button primary" href="https://jounilappi.hopto.org/CNCguitarwizard/" target="_blank" rel="noopener">Open the editor <span>↗</span></a>
+      </div>
+    </section>
+    <section class="in-action" id="in-action">
+      <div class="in-action-head">
+        <div>
+          <p class="section-number">05 / In action</p>
+          <h2>Turned up <i>loud.</i></h2>
+        </div>
+        <p>Enough pictures. This is what they sound like — straight from the workshop, no studio tricks.</p>
+      </div>
+      <div class="video-grid">
+        <figure class="video-figure">
+          <video controls preload="none" playsinline poster="video/inaction-3088.jpg" aria-label="Video: Kitten Cloud bass being played">
+            <source src="video/inaction-3088.mp4" type="video/mp4">
+          </video>
+          <figcaption><span>Kitten Cloud <em class="credit">in collaboration with Alex Blom</em></span></figcaption>
+        </figure>
+        <figure class="video-figure">
+          <video controls preload="none" playsinline poster="video/inaction-3089.jpg" aria-label="Video: Smoke Signal burst bass being played">
+            <source src="video/inaction-3089.mp4" type="video/mp4">
+          </video>
+          <figcaption><span>Smoke Signal</span></figcaption>
+        </figure>
+        <figure class="video-figure">
+          <video controls preload="none" playsinline poster="video/inaction-2790.jpg" aria-label="Video: A red guitar being played in the workshop">
+            <source src="video/inaction-2790.mp4" type="video/mp4">
+          </video>
+          <figcaption><span>Red and loud <em class="credit">Look ma, no picking hand</em></span></figcaption>
+        </figure>
+        <figure class="video-figure">
+          <video controls preload="none" playsinline poster="video/inaction-2819.jpg" aria-label="Video: A black V-shaped guitar being played">
+            <source src="video/inaction-2819.mp4" type="video/mp4">
+          </video>
+          <figcaption><span>Black V, full tilt <em class="credit">Ma, still no picking hand</em></span></figcaption>
+        </figure>
+        <figure class="video-figure">
+          <video controls preload="none" playsinline poster="video/inaction-2864.jpg" aria-label="Video: Close-up of a sunburst single-cutaway guitar with built-in passive diode distortion being played">
+            <source src="video/inaction-2864.mp4" type="video/mp4">
+          </video>
+          <figcaption><span>Sunburst, close up <em class="credit">Built-in passive diode distortion — no batteries needed</em></span></figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <p class="eyebrow">Get in touch</p>
+      <h2>Only prototypes might be available</h2>
+      <p>Not perfect — but unique, very easy to play, and roars like thunder in Lapland.</p>
+      <a class="contact-email" href="mailto:jone@stainedblood.com">jone@stainedblood.com <span>↗</span></a>
+      <div class="contact-meta">
+        <span>Unique prototypes</span>
+        <span>Handmade in Nokia</span>
+        <span>Open-source tools</span>
+      </div>
+    </section>
+    <footer>
+      <a class="brand footer-brand" href="#top"><span class="brand-mark">LS</span><span>Lapland Shaman <em>Guitars</em></span></a>
+      <p>Handmade electric guitars<br>from Nokia, Finland.</p>
+      <a href="#top">Back to the top ↑</a>
+      <small>© 2026 Lapland Shaman Guitars</small>
+    </footer>
+  </main>
 </body>
 </html>
