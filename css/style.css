@@ -1446,3 +1446,19 @@ body.lightbox-open {
   font-style: italic;
   display: block;
 }
+
+/* Disclaimer in the hero */
+.hero .disclaimer {
+  color: #ffffff8c;
+  font-family: var(--font-cormorant), serif;
+  max-width: 460px;
+  margin: 34px 0 0;
+  font-size: 17px;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.hero .disclaimer strong {
+  color: var(--copper);
+  font-weight: 500;
+}
